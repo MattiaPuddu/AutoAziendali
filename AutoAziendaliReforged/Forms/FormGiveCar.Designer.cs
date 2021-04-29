@@ -93,7 +93,7 @@ namespace AutoAziendaliReforged.Forms
             this.Controls.Add(this.lbl_autoDisponibili);
             this.Controls.Add(this.btn_giveCar);
             this.Name = "FormGiveCar";
-            this.Text = "FormGiveCar";
+            this.Text = "Assegna macchina";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,7 +23,7 @@ namespace AutoAziendaliReforged.Classi
         {
             var jsonDipendenti = File.ReadAllText(pathDipendenti);
 
-            return JsonConvert.DeserializeObject<List<Dipendente>>(jsonDipendenti);
+            return string.IsNullOrEmpty(jsonDipendenti) ? new List<Dipendente>() : JsonConvert.DeserializeObject<List<Dipendente>>(jsonDipendenti);
         }
         public static void SaveCars(List<Auto> auto)
         {
