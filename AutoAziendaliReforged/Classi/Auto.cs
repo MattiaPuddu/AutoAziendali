@@ -13,7 +13,7 @@ namespace AutoAziendaliReforged.Classi
         public string Targa { get; set; }
         public string Cilindrata { get; set; }
         public DateTime ScadenzAssicurazione { get; set; }
-        public Disponibilita Disponibilita { get; set; } = Disponibilita.DISPONIBILE;
+        public Stato Disponibilita { get; set; } = Stato.DISPONIBILE;
         public Dipendente Owner { get; set; }
 
         public Auto(string marca, string modello, string targa, string cilindrata, DateTime scadAssic)

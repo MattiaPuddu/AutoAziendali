@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoAziendaliReforged.Classi
 {
-    public enum Disponibilita
+    public enum Stato
     {
         DISPONIBILE,
         PRESA

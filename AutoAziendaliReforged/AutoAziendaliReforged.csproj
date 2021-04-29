@@ -52,7 +52,7 @@
     <Compile Include="Classi\Auto.cs" />
     <Compile Include="Classi\Dipendente.cs" />
     <Compile Include="Classi\GestioneFiles.cs" />
-    <Compile Include="Classi\Disponibilita.cs" />
+    <Compile Include="Classi\Stato.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -17,7 +17,7 @@ namespace AutoAziendaliReforged.Forms
         public FormGiveCar(List<Auto> auto)
         {
             InitializeComponent();
-            cmbx_autoDisponibili.DataSource = auto.Where(x => x.Disponibilita == Disponibilita.DISPONIBILE).ToList();
+            cmbx_autoDisponibili.DataSource = auto.Where(x => x.Disponibilita == Stato.DISPONIBILE).ToList();
             Dipendenti = GestioneFiles.GetDipendenti();
             cmbx_dipendenti.DataSource = Dipendenti;
         }
@@ -26,7 +26,7 @@ namespace AutoAziendaliReforged.Forms
         {
             var selectedItem = cmbx_autoDisponibili.SelectedItem as Auto;
             selectedItem.Owner = cmbx_dipendenti.SelectedItem as Dipendente;
-            selectedItem.Disponibilita = Disponibilita.PRESA;
+            selectedItem.Disponibilita = Stato.PRESA;
             DialogResult = DialogResult.OK;
             Close();
         }
