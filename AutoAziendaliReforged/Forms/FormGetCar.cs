@@ -21,7 +21,7 @@ namespace AutoAziendaliReforged.Forms
 
         private void btn_inserisci_Click(object sender, EventArgs e)
         {
-            Macchina = new Auto(tbx_marca.Text, tbx_modello.Text, tbx_targa.Text, tbx_cilindrata.Text, new ShortDateTime(dtp_scadenzAssicurazione.Value));
+            Macchina = new Auto(tbx_marca.Text, tbx_modello.Text, tbx_targa.Text, tbx_cilindrata.Text, dtp_scadenzAssicurazione.Value);
 
             DialogResult = DialogResult.OK;
             Close();

@@ -12,11 +12,11 @@ namespace AutoAziendaliReforged.Classi
         public string Modello { get; set; }
         public string Targa { get; set; }
         public string Cilindrata { get; set; }
-        public ShortDateTime ScadenzAssicurazione { get; set; }
+        public DateTime ScadenzAssicurazione { get; set; }
         public Stato Disponibilita { get; set; } = Stato.DISPONIBILE;
         public Dipendente Owner { get; set; }
 
-        public Auto(string marca, string modello, string targa, string cilindrata, ShortDateTime scadAssic)
+        public Auto(string marca, string modello, string targa, string cilindrata, DateTime scadAssic)
         {
             Marca = marca;
             Modello = modello;
@@ -26,7 +26,7 @@ namespace AutoAziendaliReforged.Classi
         }
         public override string ToString()
         {
-            return $"{Marca} - {Modello} - {Targa} - {ScadenzAssicurazione} - {Disponibilita} - {Owner}";
+            return $"{Marca} - {Modello} - {Targa} - {ScadenzAssicurazione.ToString("dd/MM/yyyy")} - {Disponibilita} - {Owner}";
         }
     }
 }

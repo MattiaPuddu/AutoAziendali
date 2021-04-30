@@ -14,7 +14,7 @@ namespace AutoAziendaliReforged
 {
     public partial class Form1 : Form
     {
-        public List<Auto> Macchine { get; set; }
+        public BindingList<Auto> Macchine { get; set; }
         public Form1()
         {
             InitializeComponent();

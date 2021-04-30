@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,11 +14,11 @@ namespace AutoAziendaliReforged.Classi
         public const string pathMacchine = @"D:\macchine.json";
         public const string pathDipendenti = @"D:\dipendenti.json";
 
-        public static List<Auto> GetCars()
+        public static BindingList<Auto> GetCars()
         {
             var jsonCars = File.ReadAllText(pathMacchine);
 
-            return string.IsNullOrEmpty(jsonCars) ? new List<Auto>() : JsonConvert.DeserializeObject<List<Auto>>(jsonCars);
+            return string.IsNullOrEmpty(jsonCars) ? new BindingList<Auto>() : JsonConvert.DeserializeObject<BindingList<Auto>>(jsonCars);
         }
         public static List<Dipendente> GetDipendenti()
         {
@@ -25,7 +26,7 @@ namespace AutoAziendaliReforged.Classi
 
             return string.IsNullOrEmpty(jsonDipendenti) ? new List<Dipendente>() : JsonConvert.DeserializeObject<List<Dipendente>>(jsonDipendenti);
         }
-        public static void SaveCars(List<Auto> auto)
+        public static void SaveCars(BindingList<Auto> auto)
         {
             var jsonCars = JsonConvert.SerializeObject(auto);
 

@@ -15,7 +15,7 @@ namespace AutoAziendaliReforged.Forms
     {
         public List<Auto> Macchine { get; set; }
         public List<Dipendente> Dipendenti { get; set; }
-        public FormGiveCar(List<Auto> auto)
+        public FormGiveCar(BindingList<Auto> auto)
         {
             InitializeComponent();
 
