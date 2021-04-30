@@ -21,12 +21,6 @@ namespace AutoAziendaliReforged
             Macchine = GestioneFiles.GetCars();
             RefreshGrid();
         }
-
-        private void RefreshGrid()
-        {
-            dgv_autoAziendali.DataSource = null;
-            dgv_autoAziendali.DataSource = Macchine;
-        }
         private void btn_addCar_Click(object sender, EventArgs e)
         {
             var formGetCar = new FormGetCar();
@@ -38,7 +32,6 @@ namespace AutoAziendaliReforged
             }
             RefreshGrid();
         }
-
         private void btn_giveCar_Click(object sender, EventArgs e)
         {
             var formGiveCar = new FormGiveCar(Macchine);
@@ -48,6 +41,11 @@ namespace AutoAziendaliReforged
                 GestioneFiles.SaveCars(Macchine);
             }
             RefreshGrid();
+        }
+        private void RefreshGrid()
+        {
+            dgv_autoAziendali.DataSource = null;
+            dgv_autoAziendali.DataSource = Macchine;
         }
     }
 }
